@@ -50,7 +50,7 @@ opt.guifont = "Hack Nerd Font,JetBrainsMono Nerd Font:h13"
 opt.swapfile = false
 
 opt.foldcolumn = "1" -- '0' is not bad
-opt.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 opt.foldlevelstart = 99
 opt.foldenable = true
 opt.fillchars = {
@@ -63,6 +63,11 @@ opt.fillchars = {
 }
 
 -------------------------------------- globals -----------------------------------------
+
+-- custom path
+-- g.path = g.path or {}
+-- g.path.mason = vim.fn.stdpath "config" .. "/local/mason"
+-- g.path.treesitter = vim.fn.stdpath "config" .. "/local/treesitter"
 
 g.mapleader = " "
 

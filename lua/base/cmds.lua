@@ -53,10 +53,17 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   end,
 })
 
+-- save format
+autocmd("BufWritePost", {
+  group = augroup "formatter",
+  command = ":FormatWrite",
+})
+-- save lin     InsertLeavet     TextChanged
+-- autocmd({ "BufWritePost" }, {
+--   group = augroup "lint",
+--   callback = function()
+--     require("lint").try_lint()
+--   end,
+-- })
 
 -------------------------------------- usercmds ------------------------------------------
-vim.api.nvim_create_user_command("MasonInstallAll", function()
-  if opts.ensure_installed and #opts.ensure_installed > 0 then
-    vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
-  end
-end, {})
